@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    My Blog
+{% endblock %}
+
+{% block css_files %}
+{% comment %} <link rel="stylesheet" href="{% static "blog/index.css" %}"> {% endcomment %}
+{% endblock %}
+
+{% block content %}
+<main>
+    <header id="main-navigation">
+        <h1><a href="">Ricky's Blog</a></h1>
+        <nav>
+            <a href="posts">All Posts</a>
+        </nav>
+    </header>
+    <section id="welcome">
+        <header>
+            <img src="{% static "blog/images/profile-pic.jpg" %}" alt="Ricky - The Author of this Blog" />
+        </header>
+        <p>Hi, I am Ricky and I love to blog about tech and the world!</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking" />
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>There's nothing like the views you get when hiking in the mountains! And I wasn't even prepared for what happened whilst I was enjoying the view!</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>I love programming, I love to help others and I enjoy exploring new technologies in general!</p>
+        <p>My goal is to keep on growing as a developer - and if I could help you do the same, I'd be very happy!</p>
+    </section>
+
+    <section id="contact">
+        <h2>My Contact Details</h2>
+        <p>Email: <a href="mailto:ricky@example.com">ricky@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1234567890</a></p>
+    </section>
+</main>
+{% endblock %}
